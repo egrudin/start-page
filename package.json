@@ -1,0 +1,38 @@
+{
+  "name": "start-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Start page — a local-first Firefox startup dashboard",
+  "scripts": {
+    "preview": "python3 tools/make_preview.py && python3 -m http.server 8765 --bind 127.0.0.1",
+    "icons": "python3 tools/make_icons.py",
+    "build": "python3 tools/build.py",
+    "lint": "web-ext lint --source-dir . --ignore-files \"dev/**\" \"tools/**\" \"dist/**\" \"Assets/**\" \"README.md\" \"node_modules/**\"",
+    "start": "web-ext run --source-dir . --ignore-files \"dev/**\" \"tools/**\" \"dist/**\" \"Assets/**\" \"README.md\" \"node_modules/**\"",
+    "verify": "npm run lint && npm run build"
+  },
+  "devDependencies": {
+    "web-ext": "^9.0.0"
+  },
+  "author": "Egor Grudin",
+  "homepage": "https://e.grudin.ru",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/egrudin/start-page.git"
+  },
+  "bugs": {
+    "url": "https://github.com/egrudin/start-page/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "firefox",
+    "extension",
+    "start-page",
+    "dashboard",
+    "bookmarks",
+    "tabs"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}

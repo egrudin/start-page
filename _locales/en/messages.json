@@ -1,0 +1,18 @@
+{
+  "extName": {
+    "message": "Start page",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "A Firefox start page at browser launch: bookmarks, tabs, session history and downloads. New tabs stay untouched.",
+    "description": "Extension description"
+  },
+  "actionTitle": {
+    "message": "Open Start page",
+    "description": "Toolbar button tooltip"
+  },
+  "commandOpenStart": {
+    "message": "Open Start page",
+    "description": "Keyboard command description"
+  }
+}

@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Build output and signed packages
+dist/
+.web-ext-artifacts/
+*.zip
+*.xpi
+
+# Generated preview and local artifacts
+dev/preview.html
+dev/shot-*.png
+dev/*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local environment and secrets
+.env
+.env.*
+*.pem
+*.key
+.web-extension-id
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
