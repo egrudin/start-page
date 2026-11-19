@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Build the installable extension package.
+"""Собирает устанавливаемый пакет расширения.
 
-Only runtime files are included. The preview harness, tooling and screenshots
-never ship. Produces identical .zip and .xpi archives (an XPI is a ZIP).
+Включает только runtime-файлы. Превью, инструменты и скриншоты в пакет
+не попадают. Создаёт идентичные .zip и .xpi (XPI — это ZIP).
 """
 from __future__ import annotations
 
@@ -42,8 +42,8 @@ def files() -> list[pathlib.Path]:
 
 
 def write_archive(target: pathlib.Path, version: str) -> None:
-    # Windows can keep a transient handle on a just-read artifact (indexer,
-    # antivirus); removing first makes repeated builds deterministic.
+    # Windows может не сразу отпустить только что прочитанный файл (индексатор,
+    # антивирус); удаление перед записью делает повторные сборки предсказуемыми.
     target.unlink(missing_ok=True)
     with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for path in files():

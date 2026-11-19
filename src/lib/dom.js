@@ -1,4 +1,4 @@
-/* Tiny DOM toolkit. Text is always assigned through textContent, never innerHTML. */
+/* Компактный DOM-инструментарий. Текст всегда назначается через textContent, никогда через innerHTML. */
 
 export const $ = (selector, root = document) => root.querySelector(selector);
 export const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -75,7 +75,7 @@ export function isTextInput(target) {
   );
 }
 
-/** A small number ticker used for the hero stats. */
+/** Небольшой счётчик чисел для статистики в шапке. */
 export function countTo(node, target, formatter, duration = 420) {
   const from = Number(node.dataset.value ?? 0);
   node.dataset.value = String(target);
@@ -95,7 +95,7 @@ export function countTo(node, target, formatter, duration = 420) {
   requestAnimationFrame(step);
 }
 
-/** Split a string into text and <mark> nodes using [start, end] ranges. */
+/** Разбивает строку на текстовые узлы и <mark> по диапазонам [start, end]. */
 export function highlight(text, ranges = []) {
   if (!ranges.length) return document.createTextNode(text);
   const fragment = document.createDocumentFragment();
@@ -112,7 +112,7 @@ export function highlight(text, ranges = []) {
   return fragment;
 }
 
-/** Reveal row actions as two-step, inline confirmation. */
+/** Показывает действия строки как двухшаговое подтверждение на месте. */
 export function confirmInline(container, message, { yesLabel, noLabel, onYes, onCancel } = {}) {
   const previous = [...container.childNodes];
   const previousFocus = document.activeElement;

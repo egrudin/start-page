@@ -1,4 +1,4 @@
-/* Locale-aware formatting without external dependencies. */
+/* Форматирование с учётом локали без внешних зависимостей. */
 
 const formatterCache = new Map();
 
@@ -48,7 +48,7 @@ export function dateLong(timestamp, locale, withYear = false) {
     month: "long",
     ...(withYear ? { year: "numeric" } : {}),
   }).format(new Date(timestamp));
-  // Intl renders Russian years as "2026 г."; the dash line reads better without it.
+  // Intl добавляет к русским годам «г.»; в строке с тире это лишнее.
   if (withYear && locale.startsWith("ru")) text = text.replace(/\s*г\.$/, "");
   return text;
 }

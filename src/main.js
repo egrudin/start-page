@@ -332,7 +332,7 @@ function persistSnapshot() {
   if (state.data) void writeCache("snapshot", cacheSnapshot(state.data));
 }
 
-/* ---------- actions ---------- */
+/* ---------- действия ---------- */
 
 function openUrl(url, newTab = false) {
   if (!isNavigable(url)) {
@@ -457,7 +457,7 @@ async function deleteHistory(item) {
   renderHistorySection();
   persistSnapshot();
   toaster.show(state.i18n("toast.historyRemoved"));
-  // Recount session pages/sites without blocking the removal.
+  // Пересчитываем страницы и сайты сеанса, не блокируя удаление.
   void refresh({ force: true, silent: true });
   return true;
 }
@@ -519,7 +519,7 @@ async function cycleTheme() {
   toaster.show(`${state.i18n("settings.theme")} — ${state.i18n(key)}`);
 }
 
-/* ---------- loading ---------- */
+/* ---------- загрузка ---------- */
 
 function setBusy(busy) {
   const button = $("#refresh-btn");
@@ -639,8 +639,8 @@ async function boot() {
   const cached = await readCache("snapshot");
   if (cached?.data) {
     state.data = ensureData(cached.data);
-    // Session counters from a previous browser run must never masquerade as
-    // the current session while the live refresh is still in flight.
+    // Счётчики сеанса от прошлого запуска браузера не должны выдавать себя
+    // за текущий сеанс, пока живое обновление ещё выполняется.
     const currentSession = await readSessionStart();
     if (!currentSession || state.data.sessionStartedAt !== currentSession) {
       state.data.stats = null;

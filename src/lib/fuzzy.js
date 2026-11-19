@@ -1,6 +1,6 @@
-/* A small fuzzy matcher with highlight ranges.
-   Biased toward prefix and word-boundary hits, which is what feels "smart"
-   in a command palette. Returns null when the query is not a subsequence. */
+/* Небольшой нечёткий поиск с диапазонами подсветки.
+   Приоритет отдаётся совпадениям в начале строки и на границах слов — так
+   палитра ощущается «умной». Возвращает null, если запрос не является подпоследовательностью. */
 
 const BOUNDARY = /[\s\-_/.:?&=#|()[\]{}'"«»,]/;
 

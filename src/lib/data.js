@@ -1,5 +1,5 @@
-/* Reads the browser's local state and turns it into one small, renderable model.
-   Nothing here talks to the network. */
+/* Читает локальное состояние браузера и превращает его в одну небольшую модель для рендеринга.
+   Ничего здесь не обращается к сети. */
 
 import { api, safe, isNavigable, normalizeUrl, startOfToday, DAY } from "./api.js";
 import { hostOf, basename, fileExt } from "./format.js";
@@ -187,9 +187,9 @@ export async function loadBookmarks() {
 }
 
 /**
- * The browser session starts when Firefox starts. The background page stamps
- * the time in storage.session; if that has not happened yet, fall back to the
- * beginning of today so a fresh install still shows a useful number.
+ * Сеанс браузера начинается при запуске Firefox. Фоновая страница записывает
+ * время в storage.session; если этого ещё не произошло, используем начало
+ * сегодняшнего дня, чтобы после чистой установки число всё равно было полезным.
  */
 export async function readSessionStart() {
   const stored = await safe(
@@ -272,7 +272,7 @@ export async function collectData() {
   };
 }
 
-/** A deliberately small snapshot for instant first paint; live data follows. */
+/** Намеренно небольшой снимок для мгновенной первой отрисовки; живые данные придут следом. */
 export function cacheSnapshot(data) {
   return {
     generatedAt: data.generatedAt,
@@ -295,7 +295,7 @@ export function cacheSnapshot(data) {
   };
 }
 
-/* ---------- mutations ---------- */
+/* ---------- изменения ---------- */
 
 export async function deleteHistoryUrl(url) {
   return api.history.deleteUrl({ url });

@@ -1,7 +1,7 @@
-/* Start page — background event page.
-   Deliberately tiny: the dashboard does all of its own data work.
-   This provides the toolbar button, the keyboard command and the browser
-   session timestamp used by the "current session" statistics. */
+/* StartPage — фоновая страница событий.
+   Намеренно минималистична: дашборд сам собирает все свои данные.
+   Здесь только кнопка на панели, клавиатурная команда и отметка времени
+   сеанса браузера для статистики «текущего сеанса». */
 "use strict";
 
 const api = globalThis.browser ?? globalThis.chrome;
@@ -45,14 +45,14 @@ if (api?.commands?.onCommand) {
   });
 }
 
-/* storage.session lives exactly as long as the browser session, which is
-   precisely the period the three top-line metrics describe. On a fresh
-   install the page falls back to the start of today until the next startup. */
+/* storage.session существует ровно столько же, сколько сеанс браузера,
+   — именно этот период описывают три верхние метрики. При чистой
+   установке страница откатывается к началу сегодняшнего дня до следующего запуска. */
 if (api?.runtime?.onStartup) {
   api.runtime.onStartup.addListener(() => {
     void stampSessionStart();
-    // Give session restore a moment, then reuse an already restored tab
-    // instead of opening a second copy of the dashboard.
+    // Даём восстановлению сеанса немного времени, затем используем уже
+    // восстановленную вкладку, а не открываем вторую копию дашборда.
     setTimeout(() => {
       void openStartPage();
     }, 900);

@@ -1,5 +1,5 @@
-/* Thin, defensive layer over the WebExtension APIs.
-   Every call is allowed to fail: a dashboard should degrade, not explode. */
+/* Тонкий защитный слой над WebExtension API.
+   Любой вызов может завершиться ошибкой: дашборд должен деградировать, а не падать. */
 
 export const api = globalThis.browser ?? globalThis.chrome;
 

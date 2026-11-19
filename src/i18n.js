@@ -1,5 +1,5 @@
-/* Two-language UI. Manifest strings live in _locales; everything rendered by
-   the page lives here so it can be re-applied instantly when the setting changes. */
+/* Двуязычный интерфейс. Строки манифеста лежат в _locales; всё, что рендерит
+   страница, находится здесь, чтобы мгновенно применяться при смене настройки. */
 
 export const STRINGS = {
   ru: {

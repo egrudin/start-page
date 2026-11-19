@@ -1,6 +1,6 @@
-/* Runs synchronously in <head> to avoid a theme flash before the first paint.
-   The full settings live in browser.storage.local; this mirror only carries
-   the handful of values needed for an instant, correct first frame. */
+/* Выполняется синхронно в <head>, чтобы не было вспышки темы до первой отрисовки.
+   Полные настройки лежат в browser.storage.local; здесь только несколько
+   значений, нужных для мгновенного и правильного первого кадра. */
 (() => {
   const root = document.documentElement;
   try {
@@ -17,6 +17,6 @@
       root.lang = settings.locale;
     }
   } catch {
-    /* A broken mirror should never break the page. */
+    /* Сломанное зеркало не должно ломать страницу. */
   }
 })();

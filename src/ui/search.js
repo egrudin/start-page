@@ -1,6 +1,6 @@
-/* The command palette doubles as the search field on the start page.
-   It searches live history, bookmarks and open tabs, and exposes a small
-   set of commands behind a leading ">". */
+/* Командная палитра одновременно служит полем поиска на стартовой странице.
+   Она ищет по живой истории, закладкам и открытым вкладкам и показывает небольшой
+   набор команд после ведущего ">". */
 
 import { api, isNavigable, normalizeUrl, safe } from "../lib/api.js";
 import { clear, el, highlight, isTextInput } from "../lib/dom.js";
@@ -394,8 +394,8 @@ export function initSearch(ctx) {
         return true;
       });
 
-    // Saved pages win over the same page being open or recent: the bookmark
-    // is the more deliberate source and should surface first.
+    // Сохранённые страницы важнее открытой или недавней: закладка —
+    // более осознанный источник и должна быть выше.
     const bookmarkItems = unique(rankBookmarks(bookmarkNodes, query));
     const tabItems = unique(rankTabs(tabs, query));
     const historyItems = unique(rankHistory(historyEntries, query));

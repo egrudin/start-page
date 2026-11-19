@@ -1,5 +1,5 @@
-/* Shared mechanics for the settings drawer and the shortcuts sheet:
-   focus trap, Escape, scrim, enter/leave transitions. */
+/* Общая механика панели настроек и окна подсказок:
+   ловушка фокуса, Escape, затемнение, анимации открытия и закрытия. */
 
 export function createLayer(layer, { onClose } = {}) {
   let open = false;
@@ -44,9 +44,9 @@ export function createLayer(layer, { onClose } = {}) {
     lastFocus = trigger ?? document.activeElement;
     layer.classList.remove("is-open");
     layer.hidden = false;
-    // Commit the closed transform before flipping to is-open. Without this
-    // forced style flush Firefox can paint the drawer already open and skip
-    // the transition, while closing still animates normally.
+    // Фиксируем закрытый transform перед переключением в is-open. Без этого
+    // принудительного сброса стилей Firefox может нарисовать панель уже открытой
+    // и пропустить анимацию, хотя закрытие анимируется нормально.
     void layer.offsetWidth;
     document.body.classList.add("is-locked");
     document.addEventListener("keydown", onKeydown, true);

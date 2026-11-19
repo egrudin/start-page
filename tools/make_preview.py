@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Regenerate dev/preview.html from the real new tab page.
+"""Пересобирает dev/preview.html из настоящей страницы новой вкладки.
 
-The preview is the production markup plus a mock `browser` object, so the
-stylesheet and every UI module under test are exactly the shipped ones.
+Превью — это продакшн-разметка плюс заглушка `browser`, поэтому стили и все
+UI-модули под тестом полностью совпадают с поставляемыми.
 """
 from pathlib import Path
 import re

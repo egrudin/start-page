@@ -1,6 +1,6 @@
-/* Preview-only WebExtension mock. Not shipped in the extension build.
-   Serves deterministic, realistic data so the real page can be exercised
-   and screenshotted outside Firefox. */
+/* WebExtension-заглушка только для превью. В сборку расширения не попадает.
+   Даёт детерминированные реалистичные данные, чтобы настоящую страницу можно было
+   проверить и снять вне Firefox. */
 (() => {
   "use strict";
 
@@ -34,7 +34,7 @@
       JSON.stringify({ theme, width, locale, clock24: true, seconds: false })
     );
   } catch {
-    /* ignore */
+    /* игнорируем */
   }
 
   const MINUTE = 60_000;

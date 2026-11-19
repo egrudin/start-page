@@ -1,4 +1,4 @@
-/* Start page — components: cards, rows, palette, panels, toasts. */
+/* StartPage — компоненты: карточки, строки, палитра, панели, уведомления. */
 
 .card {
   display: flex;
@@ -224,13 +224,13 @@
   line-height: 1.5;
 }
 
-/* History range control lives in the header. */
+/* Переключатель периода истории в шапке. */
 .seg__btn[data-history-range] {
   padding: 3px 7px;
   font-size: 8.5px;
 }
 
-/* Bookmark folders. */
+/* Папки закладок. */
 .chips {
   display: flex;
   align-items: center;
@@ -290,7 +290,7 @@
   opacity: 0.55;
 }
 
-/* Bookmark library. */
+/* Библиотека закладок. */
 .bookmarks-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -420,7 +420,7 @@
   }
 }
 
-/* Tab-window separators. */
+/* Разделители окон вкладок. */
 .group-label {
   display: flex;
   align-items: center;
@@ -439,7 +439,7 @@
   border-top: 0;
 }
 
-/* Downloads progress. */
+/* Прогресс загрузок. */
 .mini-bar {
   position: relative;
   display: inline-block;
@@ -456,7 +456,7 @@
   background: var(--ink);
 }
 
-/* Inline confirmation strip. */
+/* Встроенная полоса подтверждения. */
 .inline-confirm {
   display: flex;
   align-items: center;
@@ -476,7 +476,7 @@
   margin-right: auto;
 }
 
-/* Command palette. */
+/* Командная палитра. */
 .palette {
   position: absolute;
   top: calc(100% + 5px);
@@ -622,7 +622,7 @@
   gap: 3px;
 }
 
-/* Skeletons. */
+/* Скелетоны. */
 .skel-row {
   display: grid;
   grid-template-columns: 20px minmax(0, 1fr);
@@ -663,7 +663,7 @@
   }
 }
 
-/* Panels. */
+/* Панели. */
 .layer {
   position: fixed;
   inset: 0;
@@ -811,7 +811,7 @@
   flex: none;
 }
 
-/* Toasts. */
+/* Уведомления. */
 .toasts {
   position: fixed;
   bottom: 22px;

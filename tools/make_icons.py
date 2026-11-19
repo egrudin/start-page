@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Generate the StartPage icon set.
+"""Генерирует набор иконок StartPage.
 
-Design: ink rounded square, 2x2 grid of paper squares, one filled.
-Rendered at 4x and box-filtered down for clean edges. No dependencies.
+Дизайн: чернильный скруглённый квадрат, сетка 2×2 из бумажных квадратов,
+один залит. Рендерится в 4× и уменьшается box-фильтром для чистых краёв.
+Без зависимостей.
 """
 from __future__ import annotations
 
@@ -25,7 +26,7 @@ def inside_rounded_rect(x: float, y: float, size: float, radius: float) -> bool:
 
 
 def glyph_alpha(x: float, y: float) -> float:
-    # 2x2 grid: 24u cells, 8u gap, 4.5u stroke. Canvas is 128u.
+    # Сетка 2×2: ячейки 24u, зазор 8u, обводка 4.5u. Холст — 128u.
     cells = ((36.0, 36.0), (68.0, 36.0), (36.0, 68.0), (68.0, 68.0))
     filled = (68.0, 36.0)
     stroke = 4.5

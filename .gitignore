@@ -1,13 +1,13 @@
-# Dependencies
+# Зависимости
 node_modules/
 
-# Build output and signed packages
+# Результаты сборки и подписанные пакеты
 dist/
 .web-ext-artifacts/
 *.zip
 *.xpi
 
-# Generated preview and local artifacts
+# Сгенерированное превью и локальные артефакты
 dev/preview.html
 dev/shot-*.png
 dev/*.log
@@ -18,14 +18,14 @@ __pycache__/
 .venv/
 venv/
 
-# Local environment and secrets
+# Локальное окружение и секреты
 .env
 .env.*
 *.pem
 *.key
 .web-extension-id
 
-# Editors and OS
+# Редакторы и ОС
 .idea/
 .vscode/
 .DS_Store

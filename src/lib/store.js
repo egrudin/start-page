@@ -1,5 +1,5 @@
-/* Settings and the snapshot cache. storage.local is the source of truth;
-   localStorage keeps only the mirror that boot.js needs before first paint. */
+/* Настройки и кэш снимка. storage.local — источник истины;
+   localStorage хранит только зеркало, нужное boot.js до первой отрисовки. */
 
 import { api, safe } from "./api.js";
 
@@ -56,7 +56,7 @@ export function mirrorSettings(settings) {
   try {
     localStorage.setItem(MIRROR_KEY, JSON.stringify(settings));
   } catch {
-    /* Private windows and quota limits are allowed to say no. */
+    /* Приватные окна и лимиты квоты могут ответить отказом. */
   }
 }
 

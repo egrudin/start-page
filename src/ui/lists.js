@@ -1,5 +1,5 @@
-/* Pure rendering for the dashboard sections. All user-provided strings go
-   through textContent; nothing is interpolated as HTML. */
+/* Чистый рендеринг разделов дашборда. Все пользовательские строки проходят
+   через textContent; ничего не интерполируется как HTML. */
 
 import { bytes, dateShort, letterOf, number, percent, timeHM } from "../lib/format.js";
 import { icon, el, confirmInline } from "../lib/dom.js";
