@@ -7,7 +7,6 @@
   <a href="./LICENSE"><img alt="Лицензия MIT" src="https://img.shields.io/badge/license-MIT-0969da?style=flat-square&amp;labelColor=111110"></a>
   <img alt="Firefox 142+" src="https://img.shields.io/badge/Firefox-142%2B-c2410c?style=flat-square&amp;labelColor=111110">
   <img alt="Manifest V3" src="https://img.shields.io/badge/Manifest-V3-6f42c1?style=flat-square&amp;labelColor=111110">
-  <img alt="Без host permissions" src="https://img.shields.io/badge/host%20permissions-0-0f766e?style=flat-square&amp;labelColor=111110">
 </p>
 
 ---
